@@ -1,0 +1,12 @@
+<h2>Componente 1</h2>
+
+<label>Adicione um novo item no cardápio: &nbsp; <input #newItem /></label>
+<!-- Viewchild vai pegar #newItem-->
+<br/>
+<button (click)="addNewItem(newItem.value)">Add item no cardápio</button>
+<button (click)="remove()">Limpar</button>
+
+<ul>
+  <li *ngFor="let elemento of itens">{{elemento}}</li>
+</ul>
+<button (click)="removeItens()">Limpa Cardápio</button>
